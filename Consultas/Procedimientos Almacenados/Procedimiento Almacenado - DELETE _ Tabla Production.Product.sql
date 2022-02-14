@@ -1,6 +1,14 @@
 --Procedimiento Almacenado SelectAll Tabla Production.Product
-CREATE PROCEDURE production.product_SelectAll
+Alter PROCEDURE production.product_Delete
+(
+	@v_ProductID int	
+)
 AS
 begin
-	SELECT*FROM Production.Product
+
+	Delete FROM
+		production.Product
+	Where 
+		@v_ProductID=ProductID
 end;
+
